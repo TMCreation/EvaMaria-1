@@ -18,8 +18,8 @@ BOT_TOKEN = environ.get('BOT_TOKEN', '1973939003:AAG084aGDERxGL7tGwf_vG5rZPyN-Rj
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
-USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
-PICS = (environ.get('PICS', 'https://v2.techwizardent.com/download/68340')).split()
+USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
+PICS = (environ.get('PICS', 'https://v2.techwizardent.com/download/68340 https://v2.techwizardent.com/download/42778')).split()
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1600439879 1191792947 1480947731 -1001593669910').split()]
@@ -40,11 +40,11 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001670260326'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', '@cinehub_family')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', 'True')), False)
-IMDB = is_enabled((environ.get('IMDB', 'False')), True)
+IMDB = is_enabled((environ.get('IMDB', 'True')), True)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', 'True')), False)
-CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "<b><i>{file_name} » {file_size} › [ᎯℕUℛᎯᎶ](https://t.me/MOVIES_ZILAA)</i></b>")
-BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", "<b><i>{file_name} » {file_size} › [ᎯℕUℛᎯᎶ](https://t.me/MOVIES_ZILAA)</i></b>")
-IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "🏷 𝖳𝗂𝗍𝗅𝖾: <a href={url}>{title}</a> \n🔮 𝖸𝖾𝖺𝗋: {year} \n⭐️ 𝖱𝖺𝗍𝗂𝗇𝗀𝗌: {rating}/ 10 \n🎭 𝖦𝖾𝗇𝖾𝗋𝗌: {genres} \n\n🎊 𝖯𝗈𝗐𝖾𝗋𝖾𝖽 𝖡𝗒 [ᴀᴍ_ᴛᴇᴄʜ](https://t.me/Am_RoBots)")
+CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "🌀 **File Name** : <code>{file_name}</code> \n\n🌀 **File Size** : <code>{file_size}</code> \n\n<a href="https://t.me/cinehub_family">《《 © 🄲🄸🄽🄴🄷🅄🄱 coммυɴιтy 》》</a>")
+BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", "🌀 **File Name** : <code>{file_name}</code> \n\n🌀 **File Size** : <code>{file_size}</code> \n\n<a href="https://t.me/cinehub_family">《《 © 🄲🄸🄽🄴🄷🅄🄱 coммυɴιтy 》》</b>")
+IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "<b>🏷 Title : {title} ({year})</b> \n\n🎭 genres : {genres} \n📆 year : <a href={url}/releaseinfo>{year}</a> \n⭐️ Rating : <a href={url}/ratings>{rating}</a> / 10 \n⏲ Runtime : {runtime} Minutes \n🗂 Release Info : {release_date} \n🍀 Countries : {countries} \n🔠 Languages : {languages}\n💠 IMDB url : <a href={url}>{title} | {year}</a>\n\n© 👥 <b>🄲🄸🄽🄴🄷🅄🄱 coммυɴιтy</b>")
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), False)
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
